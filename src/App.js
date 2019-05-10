@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import CardList from './CardList';
-import {robos} from './robots';
+// import {robos} from './robots';
 import SearchBox from './SearchBox';
 import './App.css';
 
@@ -8,9 +8,16 @@ class App extends Component {
     constructor() {
         super()
         this.state = {
-            robos : robos,
+            robos : [],
             searchfield : ''
         }
+    }
+
+    // this is a method of Component
+    componentDidMount(){
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(users => this.setState({robos : users}));
     }
 
     // previous onSearchChange(event) was changed because this keyword pointed to obj that called it instead of App.js
