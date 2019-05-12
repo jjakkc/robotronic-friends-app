@@ -3,6 +3,7 @@ import CardList from './CardList';
 // import {robos} from './robots';
 import SearchBox from './SearchBox';
 import './App.css';
+import Scroll from './Scroll';
 
 class App extends Component {
     constructor() {
@@ -22,8 +23,10 @@ class App extends Component {
 
     // previous onSearchChange(event) was changed because this keyword pointed to obj that called it instead of App.js
     onSearchChange = (event) => {
-        // this.state.searchfield = event.target.value; Avoid mutate state directly instead use setState()
+        //Avoid mutate state directly instead use this.setState()
+        // this.state.searchfield = event.target.value; 
         this.setState({searchfield : event.target.value});
+        //Moved into render() so we can render this in CardList
         // const filteredRobots = this.state.robos.filter(robo => {
         //     return robo.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
         // });
@@ -34,13 +37,23 @@ class App extends Component {
             return robo.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
         });
         console.log(filteredRobots);
-        return (
-            <div className="tc">
-                <h1 className="f1">Robotronic Friends</h1>
-                <SearchBox searchChange={this.onSearchChange} />
-                <CardList robos={filteredRobots} />
-            </div>
-        );
+        if(this.state.robos.length === 0){
+            return (
+                <div className="tc">
+                    <h1>Loading</h1><span>...</span>
+                </div>
+            );
+        } else {
+            return (
+                <div className="tc">
+                    <h1 className="f1">Robotronic Friends</h1>
+                    <SearchBox searchChange={this.onSearchChange} />
+                    <Scroll>
+                        <CardList robos={filteredRobots} />
+                    </Scroll>
+                </div>
+            );
+        }
     }
     
 }
