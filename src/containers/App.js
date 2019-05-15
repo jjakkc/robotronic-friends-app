@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import CardList from './CardList';
-// import {robos} from './robots';
-import SearchBox from './SearchBox';
+import CardList from '../components/CardList';
+import SearchBox from '../components/SearchBox';
+import Scroll from '../components/Scroll';
 import './App.css';
-import Scroll from './Scroll';
 
 class App extends Component {
     constructor() {
@@ -23,21 +22,16 @@ class App extends Component {
 
     // previous onSearchChange(event) was changed because this keyword pointed to obj that called it instead of App.js
     onSearchChange = (event) => {
-        //Avoid mutate state directly instead use this.setState()
-        // this.state.searchfield = event.target.value; 
         this.setState({searchfield : event.target.value});
-        //Moved into render() so we can render this in CardList
-        // const filteredRobots = this.state.robos.filter(robo => {
-        //     return robo.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
-        // });
     }
     
     render(){
-        const filteredRobots = this.state.robos.filter(robo => {
-            return robo.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+        const {robos, searchfield} = this.state;
+        const filteredRobots = robos.filter(robo => {
+            return robo.name.toLowerCase().includes(searchfield.toLowerCase());
         });
         console.log(filteredRobots);
-        if(this.state.robos.length === 0){
+        if(!robos.length){
             return (
                 <div className="tc">
                     <h1>Loading</h1><span>...</span>
