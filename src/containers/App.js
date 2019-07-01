@@ -7,6 +7,7 @@ import './App.css';
 
 import { setSearchField, requestRobots } from '../actions';
 import { connect } from 'react-redux';
+import Header from '../components/Header';
 
 const mapStateToProps = state => {
     return {
@@ -57,7 +58,7 @@ class App extends Component {
         const filteredRobots = robos.filter(robo => {
             return robo.name.toLowerCase().includes(searchField.toLowerCase());
         });
-        console.log(filteredRobots);
+        // console.log(filteredRobots);
         if(isPending){
             return (
                 <div className="tc">
@@ -67,7 +68,8 @@ class App extends Component {
         } else {
             return (
                 <div className="tc">
-                    <h1 className="f1">Robotronic Friends</h1>
+                    {/* <h1 className="f1">Robotronic Friends</h1> */}
+                    <Header />
                     <SearchBox searchChange={onSearchChange} />
                     <Scroll>
                         <ErrorBoundary>
