@@ -1,16 +1,16 @@
 {
-  "main.css": "/robotronic-friends-app/static/css/main.ac5df7cd.chunk.css",
-  "main.js": "/robotronic-friends-app/static/js/main.e78a9e93.chunk.js",
-  "main.js.map": "/robotronic-friends-app/static/js/main.e78a9e93.chunk.js.map",
+  "main.css": "/robotronic-friends-app/static/css/main.c21b61ae.chunk.css",
+  "main.js": "/robotronic-friends-app/static/js/main.5b098fee.chunk.js",
+  "main.js.map": "/robotronic-friends-app/static/js/main.5b098fee.chunk.js.map",
   "runtime~main.js": "/robotronic-friends-app/static/js/runtime~main.de000560.js",
   "runtime~main.js.map": "/robotronic-friends-app/static/js/runtime~main.de000560.js.map",
   "static/css/2.15634dc2.chunk.css": "/robotronic-friends-app/static/css/2.15634dc2.chunk.css",
-  "static/js/2.d2123a26.chunk.js": "/robotronic-friends-app/static/js/2.d2123a26.chunk.js",
-  "static/js/2.d2123a26.chunk.js.map": "/robotronic-friends-app/static/js/2.d2123a26.chunk.js.map",
+  "static/js/2.c1ee39b0.chunk.js": "/robotronic-friends-app/static/js/2.c1ee39b0.chunk.js",
+  "static/js/2.c1ee39b0.chunk.js.map": "/robotronic-friends-app/static/js/2.c1ee39b0.chunk.js.map",
   "index.html": "/robotronic-friends-app/index.html",
-  "precache-manifest.9b75872c2477715fea841b6cb0049e0c.js": "/robotronic-friends-app/precache-manifest.9b75872c2477715fea841b6cb0049e0c.js",
+  "precache-manifest.4d6c47d71a918ebd63eb0448e3ba06bd.js": "/robotronic-friends-app/precache-manifest.4d6c47d71a918ebd63eb0448e3ba06bd.js",
   "service-worker.js": "/robotronic-friends-app/service-worker.js",
   "static/css/2.15634dc2.chunk.css.map": "/robotronic-friends-app/static/css/2.15634dc2.chunk.css.map",
-  "static/css/main.ac5df7cd.chunk.css.map": "/robotronic-friends-app/static/css/main.ac5df7cd.chunk.css.map",
+  "static/css/main.c21b61ae.chunk.css.map": "/robotronic-friends-app/static/css/main.c21b61ae.chunk.css.map",
   "static/media/App.css": "/robotronic-friends-app/static/media/SEGA.12a3db8b.woff"
 }
