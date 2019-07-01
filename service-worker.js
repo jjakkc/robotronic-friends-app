@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/robotronic-friends-app/precache-manifest.b27dafa7fa4e31783c10fb3aef3bd27a.js"
+  "/robotronic-friends-app/precache-manifest.9b75872c2477715fea841b6cb0049e0c.js"
 );
 
 workbox.clientsClaim();
